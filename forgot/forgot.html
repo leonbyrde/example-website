@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/signin-form.html/forgot/styles.css">
+    </head>
+
+    <body>
+        <img class="background" src="/signin-form.html/parrot-glitch.jpg">
+        <div class="forgotform">
+            <h1 id="title">Did you forget your password? You silly goose! 
+                Please choose a method below if you wish to attempt to recover your account...</h1>
+            <div class="forgot-form">
+                <div class="in-field" id="emailfield">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input name="email" type="email" placeholder="Email" required>
+                </div>
+
+                <div class="in-field" id="phonefield">
+                    <i class="fa-solid fa-user"></i>
+                    <input name="user" type="text" placeholder="Phone No." required>
+                </div>
+
+                <div class="in-field" id="qfield">
+                    <i class="fa-solid fa-question"></i>
+                    <input name="question" type="password" placeholder="Answer" required>
+                </div>
+                <div class="selection" id="selection">
+                    <select name="selection" id="selection" required>
+                        <option name="Select">Select</option>
+                        <option value="Best-friend">What was the name of your childhood best-friend?</option>
+                        <option value="Street">What was the name of the street you grew up on?</option>
+                        <option value="Computer">Where did you first use a computer?</option></select>
+                </div>
+                <a href="/signin-form.html/form.html">Back</a>
+            </div>
+            <div class="btns">
+                <button type="button" id="emailbtn" class="">Email</button>
+                <button type="button" id="phonebtn">Phone No.</button>
+                <button type="button" id="qbtn">Security Questions</button>
+            </div>
+            <div class="submit">
+                <button class="submit-btn" type="submit" id="submit">Confirm</button>
+            </div>
+        </div>
+        <script>
+        let emailbtn = document.getElementById("emailbtn");
+        let phonebtn = document.getElementById("phonebtn");
+        let qbtn = document.getElementById("qbtn");
+        let phonefield = document.getElementById("phonefield");
+        let emailfield = document.getElementById("emailfield");
+        let qfield = document.getElementById("qfield");
+        let selection = document.getElementById("selection");
+        let title = document.getElementById("title");
+
+        emailbtn.onclick = function(){
+            emailfield.style.maxHeight = "60px";
+            phonefield.style.maxHeight = "0";
+            qfield.style.maxHeight = "0";
+            selection.style.maxHeight = "0";
+            selection.style.top = "-10000%"
+            title.innerHTML = "Please enter the email associated with your account.";
+            phonebtn.classList.add("disable");
+            qbtn.classList.add("disable");
+            emailbtn.classList.remove("disable");
+            selection.classList.add("disable");
+        }
+    
+        phonebtn.onclick = function(){
+            phonefield.style.maxHeight = "60px";
+            emailfield.style.maxHeight = "0";
+            qfield.style.maxHeight = "0";
+            selection.style.maxHeight = "0";
+            selection.style.top = "-10000%"
+            title.innerHTML = "Please enter the Phone No. associated with your account."
+            phonebtn.classList.remove("disable");
+            emailbtn.classList.add("disable");
+            qbtn.classList.add("disable");
+            selection.classList.add("disable");
+        }
+        qbtn.onclick = function(){selection.classList.add("disable");
+            qfield.style.maxHeight = "60px";
+            selection.style.maxHeight = "60px";
+            emailfield.style.maxHeight = "0";
+            phonefield.style.maxHeight = "0";
+            selection.style.top = "-7%"
+            title.innerHTML = "Please choose from the security questions below."
+            qbtn.classList.remove("disable");
+            selection.classList.remove("disable");
+            phonebtn.classList.add("disable");
+            emailbtn.classList.add("disable");
+        }
+        </script>
+
+    </body>
+</html>

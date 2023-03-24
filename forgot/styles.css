@@ -1,0 +1,153 @@
+.forgotform {
+    background-color: rgb(163, 162, 162);
+    border-radius: 5px;
+    height: 450px;
+    width: 270px;
+    padding: 10px 10px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btns {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 13%;
+    transform: translate(-50%);
+}
+
+.btns button {
+    flex-basis: 48%;
+    background: blue;
+    color: #fff;
+    height: 40px;
+    margin-left: 3px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color 0.9s;
+}
+.btns button:hover {
+    opacity: 0.8;
+}
+.btns button:active {
+    opacity: 0.6;
+}
+.btns button.disable {
+    background-color: lightgray;
+    color: black;
+}
+
+a {
+    color: black;
+    transition: color .25s;
+    position: relative;
+    top: -1%;
+    left: 2.5%;
+}
+a:hover {
+    color: blue;
+}
+
+.in-field {
+    background-color: transparent;
+    margin-bottom: 3px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+
+input {
+    width: 100%;
+    font-family: monospace;
+    background-color: lightgray;
+    border-radius: 5px;
+    margin: 3px;
+    border: none;
+    outline: none;
+    padding: 21px 5px;
+}
+
+.forgot-form {
+    height: 300px;
+    width: 250px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+h1 {
+    font-size: medium;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+.submit-btn {
+    flex-basis: 48%;
+    background-color: blue;
+    color: #fff;
+    height: 40px;
+    width: 120px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+.submit {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.submit-btn:hover {
+    opacity: 0.8;
+}
+.submit-btn:active {
+    background-color: #fff;
+    color: blue;
+}
+
+.emailfield {
+    display: block;
+}
+
+.selection {
+    position: absolute;
+    top: -10000%;
+    align-items: center;
+}
+
+select {
+    width: 250px;
+}
